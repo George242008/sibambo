@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<body bgcolor="pink">
+    <meta charset="UTF-8">
+    <title>Delayed Play with Sound</title>
+    <style>
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id="overlay">Click to start</div>
+<figure style="display:flex; gap:20px;">
+<video id="myVideo" width="1080" height="720">
+    <source src="final.mp4" type="video/mp4">
+</video><figcaption><font color="WHITE"><H2>Happy 37th Birthday</H2></FONT><font color="darkpurple"><h3> to our amazing Mom ❤️
+
+Thank you for everything you’ve done for us. We know you sacrificed so much just to take care of us — things we saw and even the things we didn’t. You always put us first, even when it wasn’t easy, and that kind of love is something we will carry with us forever.
+
+Because of you, we know what strength looks like. Because of you, we know what unconditional love feels like. You didn’t just raise us — you gave us a life, a foundation, and a reason to keep going no matter what.
+
+We are so grateful for everything you and Dad do for us, for all the sacrifices, the hard work, and the love that keeps our family strong.
+
+We hope one day we can give back even a fraction of what you’ve given us. You deserve the world and more.
+
+Happy 37th, Mom. We love you more than words could ever explain ❤️</h></font><p>Happy Birthday MAMMA OUR QUEEN OF THE HOUSE</p>
+<P>ENJOY YOUR DAY MAMMA WE LOVE AND WE WON'T STOP LOVING YOU</P>
+<P>PAPPA DON'T FORGET TO SPOIL YOUR QUEEN😂😂😂</P>
+
+</figcaption>
+</figure>
+
+<script>
+const video = document.getElementById("myVideo");
+const overlay = document.getElementById("overlay");
+
+overlay.addEventListener("click", () => {
+    overlay.style.display = "none";
+
+    // Wait 3 seconds AFTER click
+    setTimeout(() => {
+        video.play();
+    }, 3000);
+});
+</script>
+</body>
+</body>
+</html>

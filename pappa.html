@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birthday Quiz</title>
+    <script>
+        function checkAnswers(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+
+                let george = document.getElementById("q1").value.trim().toLowerCase();
+                let simangaliso = document.getElementById("q2").value.trim().toLowerCase();
+                let mpendulo = document.getElementById("q3").value.trim().toLowerCase();
+                let gugulethu = document.getElementById("q4").value.trim().toLowerCase();
+
+                if (
+                    george === "24 september 2008" &&
+                    simangaliso === "24 september 2011" &&
+                    mpendulo === "28 september 2013" &&
+                    gugulethu === "30 october 2020"
+                ) {
+                    window.location.href = "pass.html";
+                } else {
+                    window.location.href = "Mamma1.html";
+                }
+            }
+        }
+    </script>
+</head> 
+<body>
+<body bgcolor="red"></body>
+    <h1>Enter each child's date of birth (press Enter on the last one):</h1>
+<h2>This is the only Game in which you have to play individually so
+<font color="white">NO HELPING EACH OTHER</font><p>
+MOM PLS HAND OVER THE PHONE TO DAD SO THAT HE CAN FILL IN FIRST</p> 
+    </h2><p>George:</p>
+    <input type="text" id="q1" placeholder=""><br><br>
+
+    <p>Simangaliso:</p>
+    <input type="text" id="q2" placeholder=""><br><br>
+
+    <p>Mpendulo:</p>
+    <input type="text" id="q3" placeholder=""><br><br>
+
+    <p>Gugulethu:</p>
+    <input type="text" id="q4" placeholder=""
+           onkeypress="checkAnswers(event)">
+
+</body>
+</html>
